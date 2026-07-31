@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ColorDisplay: View {
+    let color: Color
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 25.0)
+            .fill(color)
+            .frame(width: 100, height: 100, alignment: .center)
+            .padding()
     }
 }
 
 #Preview {
-    ColorDisplay()
+    ColorDisplay(color: .green)
 }
